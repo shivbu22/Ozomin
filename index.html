@@ -14,6 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/landing.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#00C853" />
 
   <!-- Firebase Integration for Analytics -->
   <script type="module">
@@ -768,5 +770,45 @@
 
   <script src="scripts/config.js"></script>
   <script src="scripts/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+          console.log('SW registered: ', registration);
+        }).catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+      });
+    }
+  </script>
+
+  <!-- ═══════════════════════════════════
+       ECO ASSISTANT (GENKIT)
+  ═══════════════════════════════════ -->
+  <div class="eco-chat" id="eco-chat">
+    <button class="eco-chat__toggle" id="eco-chat-toggle" aria-label="Open Eco Assistant">
+      <span class="eco-chat__toggle-icon">💬</span>
+    </button>
+    <div class="eco-chat__window" id="eco-chat-window">
+      <div class="eco-chat__header">
+        <div class="eco-chat__header-info">
+          <strong>Eco Assistant</strong>
+          <span class="badge badge-mint" style="font-size:0.6rem;padding:2px 6px;">Powered by Google AI</span>
+        </div>
+        <button class="eco-chat__close" id="eco-chat-close" aria-label="Close chat">✕</button>
+      </div>
+      <div class="eco-chat__messages" id="eco-chat-messages">
+        <div class="eco-chat__msg eco-chat__msg--bot">
+          Hi! I'm your Eco Assistant. How can I help you make your city cleaner today?
+        </div>
+      </div>
+      <form class="eco-chat__input-area" id="eco-chat-form">
+        <input type="text" class="eco-chat__input" id="eco-chat-input" placeholder="Ask about recycling, garbage..." required />
+        <button type="submit" class="eco-chat__send" aria-label="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

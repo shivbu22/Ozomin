@@ -29,4 +29,38 @@ describe('Ozomin Worker API', () => {
     
     expect(response.status).toBe(404);
   });
+
+  describe('Products API', () => {
+    it('should return a list of products on GET /api/products', async () => {
+      // Mock D1 Database
+      const mockEnv = {
+        DB: {
+          prepare: () => ({
+            all: async () => ({
+              results: [{ id: 1, name: 'Basic Cleaning' }]
+            })
+          })
+        }
+      };
+      
+      const request = new Request('http://localhost/api/products');
+      const response = await worker.fetch(request, mockEnv, {});
+      
+      expect(response.status).toBe(200);
+      const data = await response.json();
+      expect(data.data[0].name).toBe('Basic Cleaning');
+    });
+  });
+
+  describe('Admin API Auth', () => {
+    it('should return 401 for admin routes without auth headers', async () => {
+      const request = new Request('http://localhost/api/admin/orders');
+      const response = await worker.fetch(request, {}, {});
+      
+      expect(response.status).toBe(401);
+      const data = await response.json();
+      expect(data.error).toBe('Unauthorized: Missing credentials');
+    });
+  });
 });
+

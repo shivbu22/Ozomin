@@ -1397,3 +1397,170 @@
   .app-showcase__downloads { flex-direction: column; gap: var(--space-5); }
   .mockup-phone { width: 280px; height: 560px; }
 }
+
+/* ─── ECO ASSISTANT CHAT WIDGET ───────── */
+.eco-chat {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  font-family: var(--font-body);
+}
+
+.eco-chat__toggle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--grad-green);
+  border: none;
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.eco-chat__toggle:hover {
+  transform: scale(1.1);
+}
+
+.eco-chat__toggle-icon {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.eco-chat__window {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 320px;
+  height: 400px;
+  background: var(--eco-surface);
+  border: 1px solid var(--eco-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.eco-chat__window.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.eco-chat__header {
+  padding: 12px 16px;
+  background: var(--grad-card);
+  border-bottom: 1px solid var(--eco-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eco-chat__header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.eco-chat__header-info strong {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.eco-chat__close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.eco-chat__close:hover {
+  color: var(--text-primary);
+}
+
+.eco-chat__messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eco-chat__msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.eco-chat__msg--bot {
+  background: rgba(0, 200, 83, 0.1);
+  border: 1px solid rgba(0, 200, 83, 0.2);
+  color: var(--text-primary);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.eco-chat__msg--user {
+  background: var(--grad-green);
+  color: #000;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.eco-chat__input-area {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid var(--eco-border);
+  background: var(--grad-card);
+  gap: 8px;
+}
+
+.eco-chat__input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--eco-border);
+  border-radius: 20px;
+  padding: 8px 12px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.eco-chat__input:focus {
+  border-color: var(--eco-green);
+}
+
+.eco-chat__send {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--grad-green);
+  border: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.eco-chat__send:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .eco-chat__window {
+    width: calc(100vw - 48px);
+  }
+}

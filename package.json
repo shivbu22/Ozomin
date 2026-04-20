@@ -1,4 +1,10 @@
 {
+  "name": "ozomin-web",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start:ai": "node ai.js"
+  },
   "dependencies": {
     "@genkit-ai/googleai": "^1.28.0",
     "firebase": "^12.11.0",

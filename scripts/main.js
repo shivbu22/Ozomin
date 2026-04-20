@@ -162,3 +162,69 @@ if (hero) {
 }
 
 console.log('🌿 Ozomins — Eco services delivered in minutes');
+
+// ─── ECO ASSISTANT CHAT WIDGET ──
+const chatToggle = document.getElementById('eco-chat-toggle');
+const chatWindow = document.getElementById('eco-chat-window');
+const chatClose = document.getElementById('eco-chat-close');
+const chatForm = document.getElementById('eco-chat-form');
+const chatInput = document.getElementById('eco-chat-input');
+const chatMessages = document.getElementById('eco-chat-messages');
+
+if (chatToggle && chatWindow && chatClose && chatForm) {
+  chatToggle.addEventListener('click', () => {
+    chatWindow.classList.add('active');
+    chatInput.focus();
+  });
+
+  chatClose.addEventListener('click', () => {
+    chatWindow.classList.remove('active');
+  });
+
+  function appendMessage(text, isUser = false) {
+    const msgDiv = document.createElement('div');
+    msgDiv.classList.add('eco-chat__msg');
+    msgDiv.classList.add(isUser ? 'eco-chat__msg--user' : 'eco-chat__msg--bot');
+    msgDiv.textContent = text;
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  chatForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const query = chatInput.value.trim();
+    if (!query) return;
+
+    appendMessage(query, true);
+    chatInput.value = '';
+    
+    // Add loading indicator
+    const loadingDiv = document.createElement('div');
+    loadingDiv.classList.add('eco-chat__msg', 'eco-chat__msg--bot');
+    loadingDiv.textContent = 'Typing...';
+    loadingDiv.id = 'eco-chat-loading';
+    chatMessages.appendChild(loadingDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    try {
+      const res = await fetch('http://localhost:3001/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query })
+      });
+      const data = await res.json();
+      
+      document.getElementById('eco-chat-loading')?.remove();
+      
+      if (data.response) {
+        appendMessage(data.response);
+      } else {
+        appendMessage("Sorry, I couldn't process that right now.");
+      }
+    } catch (err) {
+      console.error(err);
+      document.getElementById('eco-chat-loading')?.remove();
+      appendMessage("I'm offline at the moment. Please try again later!");
+    }
+  });
+}
