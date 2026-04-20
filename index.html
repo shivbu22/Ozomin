@@ -14,6 +14,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/landing.css" />
+
+  <!-- Firebase Integration for Analytics -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+    const firebaseConfig = {
+      apiKey: "MOCK_API_KEY",
+      authDomain: "ozomins.firebaseapp.com",
+      projectId: "ozomins",
+      storageBucket: "ozomins.appspot.com",
+      messagingSenderId: "123456789",
+      appId: "1:123456789:web:123456",
+      measurementId: "G-12345"
+    };
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </head>
 
 <body>
@@ -76,8 +93,8 @@
         </p>
 
         <div class="hero__cta">
-          <a href="#how-it-works" class="btn btn-primary btn-lg" id="hero-learn-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <a href="#how-it-works" class="btn btn-primary btn-lg" id="hero-learn-btn" aria-label="Learn more about how Ozomins works">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             Learn More
           </a>
         </div>
@@ -283,7 +300,7 @@
             <span class="badge badge-green">From ₹99</span>
             <span class="service-card__eta">⚡ 6–10 min</span>
           </div>
-          <a href="cleaning.html" class="service-card__cta" id="book-cleaning">Learn More →</a>
+          <a href="cleaning.html" class="service-card__cta" id="book-cleaning" aria-label="Learn more about Cleaning">Learn More →</a>
         </div>
 
         <div class="service-card reveal" id="service-garbage" style="--delay:0.1s">
@@ -296,7 +313,7 @@
             <span class="badge badge-green">From ₹59</span>
             <span class="service-card__eta">⚡ 8–15 min</span>
           </div>
-          <a href="garbage.html" class="service-card__cta" id="book-garbage">Learn More →</a>
+          <a href="garbage.html" class="service-card__cta" id="book-garbage" aria-label="Learn more about Garbage Pickup">Learn More →</a>
         </div>
 
         <div class="service-card reveal" id="service-recycling" style="--delay:0.2s">
@@ -309,7 +326,7 @@
             <span class="badge badge-mint">Earn Money</span>
             <span class="service-card__eta">⚡ 10–20 min</span>
           </div>
-          <a href="recycling.html" class="service-card__cta" id="book-recycling">Learn More →</a>
+          <a href="recycling.html" class="service-card__cta" id="book-recycling" aria-label="Learn more about Recycling">Learn More →</a>
         </div>
 
         <div class="service-card reveal" id="service-transport" style="--delay:0.3s">
@@ -322,7 +339,7 @@
             <span class="badge badge-green">From ₹299</span>
             <span class="service-card__eta">⚡ 20–45 min</span>
           </div>
-          <a href="transport.html" class="service-card__cta" id="book-transport">Learn More →</a>
+          <a href="transport.html" class="service-card__cta" id="book-transport" aria-label="Learn more about Transport">Learn More →</a>
         </div>
 
         <div class="service-card service-card--emergency reveal" id="service-emergency" style="--delay:0.4s">
@@ -335,7 +352,7 @@
             <span class="badge" style="background:rgba(255,23,68,0.15);color:#FF5252;border-color:rgba(255,23,68,0.25)">24/7 Priority</span>
             <span class="service-card__eta">⚡ &lt;5 min</span>
           </div>
-          <a href="emergency.html" class="service-card__cta service-card__cta--emergency" id="book-emergency">View Emergency Protocol →</a>
+          <a href="emergency.html" class="service-card__cta service-card__cta--emergency" id="book-emergency" aria-label="View Emergency Protocol">View Emergency Protocol →</a>
         </div>
 
         <div class="service-card service-card--subscription reveal" id="service-subscription" style="--delay:0.5s">

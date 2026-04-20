@@ -10,12 +10,14 @@
     "db:init": "wrangler d1 execute ozomin-db --file=schema.sql",
     "db:seed": "wrangler d1 execute ozomin-db --file=seed.sql",
     "db:init:local": "wrangler d1 execute ozomin-db --local --file=schema.sql",
-    "db:seed:local": "wrangler d1 execute ozomin-db --local --file=seed.sql"
+    "db:seed:local": "wrangler d1 execute ozomin-db --local --file=seed.sql",
+    "test": "vitest run"
   },
   "dependencies": {
     "resend": "^4.5.1"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^3.0.0",
+    "vitest": "^1.6.0"
   }
 }
