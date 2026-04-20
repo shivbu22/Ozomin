@@ -8,8 +8,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment
-.env
-.env.*
+.env*
 !.env.example
 
 # OS
@@ -26,9 +25,19 @@ build/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
 
 # IDEs
 .vscode/
 .idea/
 *.iml
+
+# User Requested Standard Rules
+*.pem
+*.key
+secrets.json
+credentials.json
+serviceAccountKey.json
+venv/
+__pycache__/
+dist/
+*.log
