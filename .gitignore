@@ -41,3 +41,7 @@ venv/
 __pycache__/
 dist/
 *.log
+
+# User Specific Removes
+README.md
+firebase_options.dart
