@@ -1,0 +1,21 @@
+{
+  "name": "ozomin-worker",
+  "version": "1.0.0",
+  "description": "Ozomin backend API — Cloudflare Worker",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute ozomin-db --file=schema.sql",
+    "db:seed": "wrangler d1 execute ozomin-db --file=seed.sql",
+    "db:init:local": "wrangler d1 execute ozomin-db --local --file=schema.sql",
+    "db:seed:local": "wrangler d1 execute ozomin-db --local --file=seed.sql"
+  },
+  "dependencies": {
+    "resend": "^4.5.1"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

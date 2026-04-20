@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ozomins — Eco Services Delivered in Minutes</title>
+  <meta name="description" content="Ozomins is India's first on-demand sanitation and waste logistics platform. Book cleaning, garbage pickup, recycling, and emergency services in minutes." />
+  <meta name="keywords" content="on-demand cleaning, waste management, eco services, sanitation, hyperlocal, India" />
+  <meta property="og:title" content="Ozomins — Eco Services Delivered in Minutes" />
+  <meta property="og:description" content="Book verified sanitation workers in minutes. Real-time tracking. Eco impact." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/landing.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand" id="nav-brand">
+        <div class="nav__logo">
+          <span class="nav__logo-icon">🌿</span>
+        </div>
+        <span class="nav__name">Ozomins</span>
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#how-it-works" class="nav__link">How It Works</a></li>
+        <li><a href="#impact" class="nav__link">Impact</a></li>
+        <li><a href="#worker" class="nav__link">For Workers</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="nav__burger" id="nav-burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════
+       HERO
+  ═══════════════════════════════════ -->
+  <section class="hero noise" id="hero">
+    <!-- Background orbs -->
+    <div class="orb orb-green" style="width:600px;height:600px;top:-100px;left:-150px;opacity:0.6;"></div>
+    <div class="orb orb-mint"  style="width:400px;height:400px;top:200px;right:-100px;animation-delay:3s;"></div>
+    <div class="orb orb-green" style="width:300px;height:300px;bottom:100px;left:40%;animation-delay:5s;opacity:0.3;"></div>
+
+    <!-- Grid lines -->
+    <div class="hero__grid"></div>
+
+    <div class="container hero__content">
+      <div class="hero__left animate-fade-up">
+        <div class="pill-tag delay-1 animate-fade-up">
+          <span class="pill-dot"></span>
+          Now Live in Beta · Bengaluru
+        </div>
+
+        <h1 class="heading-hero hero__headline">
+          Your City,<br/>
+          <span class="text-gradient">Cleaner</span><br/>
+          In Minutes.
+        </h1>
+
+        <p class="body-lg hero__desc">
+          Book verified sanitation workers for cleaning, garbage pickup, 
+          recycling & emergencies — tracked in real-time. 
+          <strong class="text-green">Ozomins</strong> is the operating system for urban cleanliness in India.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#how-it-works" class="btn btn-primary btn-lg" id="hero-learn-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Learn More
+          </a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-number">500+</span>
+            <span class="hero__stat-label">Workers</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">&lt;8min</span>
+            <span class="hero__stat-label">Response Time</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">12k+</span>
+            <span class="hero__stat-label">Jobs Done</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__right animate-fade-up delay-3">
+        <div class="hero__phone-wrap">
+          <div class="hero__phone">
+            <!-- Phone mockup - booking screen -->
+            <div class="phone__header">
+              <div class="phone__time">9:41</div>
+              <div class="phone__notch"></div>
+              <div class="phone__status">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+              </div>
+            </div>
+
+            <div class="phone__screen">
+              <!-- App header -->
+              <div class="app__topbar">
+                <div class="app__location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--eco-green)" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Koramangala, Bengaluru</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="app__avatar">A</div>
+              </div>
+
+              <!-- Search bar -->
+              <div class="app__search">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>What do you need?</span>
+              </div>
+
+              <!-- Live banner -->
+              <div class="app__banner">
+                <div class="app__banner-dot"></div>
+                <span>48 workers nearby · Avg 6 min</span>
+              </div>
+
+              <!-- Service grid -->
+              <p class="app__section-title">Services</p>
+              <div class="app__services">
+                <div class="app__service app__service--active" id="app-service-clean">
+                  <div class="app__service-icon">🧹</div>
+                  <span>Cleaning</span>
+                </div>
+                <div class="app__service" id="app-service-garbage">
+                  <div class="app__service-icon">🗑️</div>
+                  <span>Garbage</span>
+                </div>
+                <div class="app__service" id="app-service-recycle">
+                  <div class="app__service-icon">♻️</div>
+                  <span>Recycling</span>
+                </div>
+                <div class="app__service" id="app-service-emergency">
+                  <div class="app__service-icon">🚨</div>
+                  <span>Emergency</span>
+                </div>
+              </div>
+
+              <!-- Active job card -->
+              <p class="app__section-title">Nearby Workers</p>
+              <div class="app__worker-card">
+                <div class="app__worker-avatar">
+                  <span>R</span>
+                  <div class="app__worker-online"></div>
+                </div>
+                <div class="app__worker-info">
+                  <div class="app__worker-name">Rajan Kumar</div>
+                  <div class="app__worker-meta">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="var(--eco-green)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    4.9 · Cleaning Expert · 0.4 km
+                  </div>
+                </div>
+                <button class="app__book-btn" id="app-book-worker">Book</button>
+              </div>
+
+              <div class="app__worker-card">
+                <div class="app__worker-avatar app__worker-avatar--b">
+                  <span>P</span>
+                  <div class="app__worker-online"></div>
+                </div>
+                <div class="app__worker-info">
+                  <div class="app__worker-name">Priya Devi</div>
+                  <div class="app__worker-meta">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="var(--eco-green)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    4.8 · Garbage & Recycling · 0.6 km
+                  </div>
+                </div>
+                <button class="app__book-btn" id="app-book-worker-2">Book</button>
+              </div>
+
+            </div>
+
+            <!-- Bottom nav -->
+            <div class="phone__navbar">
+              <div class="phone__nav-item phone__nav-item--active">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                <span>Home</span>
+              </div>
+              <div class="phone__nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                <span>Track</span>
+              </div>
+              <div class="phone__nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span>History</span>
+              </div>
+              <div class="phone__nav-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>Profile</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating cards around phone -->
+          <div class="hero__float hero__float--1">
+            <span class="hero__float-icon">✅</span>
+            <div>
+              <div class="hero__float-title">Job Complete!</div>
+              <div class="hero__float-sub">Cleaning · Sector 12</div>
+            </div>
+          </div>
+
+          <div class="hero__float hero__float--2">
+            <div class="hero__float-track">
+              <div class="hero__float-track-dot"></div>
+              <span>Rajan is 2 min away</span>
+            </div>
+          </div>
+
+          <div class="hero__float hero__float--3">
+            <span>♻️</span>
+            <div>
+              <div class="hero__float-title">4.2 kg recycled</div>
+              <div class="hero__float-sub">You saved ₹84</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint" id="hero-scroll">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       TRUSTED BY / SOCIAL PROOF
+  ═══════════════════════════════════ -->
+  <section class="trust section--sm">
+    <div class="container">
+      <p class="trust__label">Trusted by urban communities across India</p>
+      <div class="trust__logos">
+        <div class="trust__logo">🏙️ Bengaluru</div>
+        <div class="trust__logo">🏙️ Mumbai</div>
+        <div class="trust__logo">🏙️ Hyderabad</div>
+        <div class="trust__logo">🏙️ Pune</div>
+        <div class="trust__logo">🏙️ Chennai</div>
+        <div class="trust__logo">🏙️ Delhi NCR</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="pill-tag">Services</div>
+        <h2 class="heading-xl">Everything Your City Needs.<br/><span class="text-gradient">On Demand.</span></h2>
+        <p class="body-lg" style="max-width:560px;">From daily cleaning to emergency waste removal — all booked in seconds, handled by verified professionals.</p>
+      </div>
+
+      <div class="services__grid">
+        <div class="service-card reveal" id="service-cleaning" style="--delay:0s">
+          <div class="service-card__icon-wrap">
+            <div class="service-card__icon">🧹</div>
+          </div>
+          <h3 class="service-card__name">Cleaning</h3>
+          <p class="service-card__desc">Home, office, or public space — our trained workers handle all types of cleaning with eco-friendly products.</p>
+          <div class="service-card__meta">
+            <span class="badge badge-green">From ₹99</span>
+            <span class="service-card__eta">⚡ 6–10 min</span>
+          </div>
+          <a href="cleaning.html" class="service-card__cta" id="book-cleaning">Learn More →</a>
+        </div>
+
+        <div class="service-card reveal" id="service-garbage" style="--delay:0.1s">
+          <div class="service-card__icon-wrap service-card__icon-wrap--b">
+            <div class="service-card__icon">🗑️</div>
+          </div>
+          <h3 class="service-card__name">Garbage Pickup</h3>
+          <p class="service-card__desc">Schedule bulk waste pickup for your home or locality. Proper disposal guaranteed — no dumping, no shortcuts.</p>
+          <div class="service-card__meta">
+            <span class="badge badge-green">From ₹59</span>
+            <span class="service-card__eta">⚡ 8–15 min</span>
+          </div>
+          <a href="garbage.html" class="service-card__cta" id="book-garbage">Learn More →</a>
+        </div>
+
+        <div class="service-card reveal" id="service-recycling" style="--delay:0.2s">
+          <div class="service-card__icon-wrap service-card__icon-wrap--c">
+            <div class="service-card__icon">♻️</div>
+          </div>
+          <h3 class="service-card__name">Recycling</h3>
+          <p class="service-card__desc">Earn money for your recyclable waste. We pick up, sort, and send to certified recyclers. Get paid instantly.</p>
+          <div class="service-card__meta">
+            <span class="badge badge-mint">Earn Money</span>
+            <span class="service-card__eta">⚡ 10–20 min</span>
+          </div>
+          <a href="recycling.html" class="service-card__cta" id="book-recycling">Learn More →</a>
+        </div>
+
+        <div class="service-card reveal" id="service-transport" style="--delay:0.3s">
+          <div class="service-card__icon-wrap service-card__icon-wrap--d">
+            <div class="service-card__icon">🚛</div>
+          </div>
+          <h3 class="service-card__name">Transport</h3>
+          <p class="service-card__desc">Bulk waste or construction debris that needs moving? Our logistics team handles heavy-duty transport with proper permits.</p>
+          <div class="service-card__meta">
+            <span class="badge badge-green">From ₹299</span>
+            <span class="service-card__eta">⚡ 20–45 min</span>
+          </div>
+          <a href="transport.html" class="service-card__cta" id="book-transport">Learn More →</a>
+        </div>
+
+        <div class="service-card service-card--emergency reveal" id="service-emergency" style="--delay:0.4s">
+          <div class="service-card__icon-wrap service-card__icon-wrap--e">
+            <div class="service-card__icon">🚨</div>
+          </div>
+          <h3 class="service-card__name">Emergency</h3>
+          <p class="service-card__desc">Overflowing drains, biohazard spills, post-flood cleanup — get the fastest response. Priority dispatch. 24/7.</p>
+          <div class="service-card__meta">
+            <span class="badge" style="background:rgba(255,23,68,0.15);color:#FF5252;border-color:rgba(255,23,68,0.25)">24/7 Priority</span>
+            <span class="service-card__eta">⚡ &lt;5 min</span>
+          </div>
+          <a href="emergency.html" class="service-card__cta service-card__cta--emergency" id="book-emergency">View Emergency Protocol →</a>
+        </div>
+
+        <div class="service-card service-card--subscription reveal" id="service-subscription" style="--delay:0.5s">
+          <div class="service-card__top-badge">Popular</div>
+          <div class="service-card__icon-wrap service-card__icon-wrap--f">
+            <div class="service-card__icon">📅</div>
+          </div>
+          <h3 class="service-card__name">Subscriptions</h3>
+          <p class="service-card__desc">Set it and forget it. Daily, weekly, or monthly plans for homes, offices, and housing societies.</p>
+          <div class="service-card__meta">
+            <span class="badge badge-green">Save 30%</span>
+            <span class="service-card__eta">🔄 Recurring</span>
+          </div>
+          <a href="subscription.html" class="service-card__cta" id="book-subscription">View Plans →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════ -->
+  <section class="hiw section" id="how-it-works">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="pill-tag">How It Works</div>
+        <h2 class="heading-xl"><span class="text-gradient">3 Steps</span> to a Cleaner City</h2>
+      </div>
+
+      <div class="hiw__steps">
+        <div class="hiw__step reveal delay-1">
+          <div class="hiw__step-num">01</div>
+          <div class="hiw__step-icon icon-box icon-box-lg">📍</div>
+          <h3 class="heading-md">Pick Your Service</h3>
+          <p class="body-md">Select from Cleaning, Garbage, Recycling, Transport, or Emergency. Set your location and describe the job — even upload a photo.</p>
+        </div>
+
+        <div class="hiw__connector reveal delay-2">
+          <div class="hiw__connector-line"></div>
+          <div class="hiw__connector-arrow">→</div>
+        </div>
+
+        <div class="hiw__step reveal delay-3">
+          <div class="hiw__step-num">02</div>
+          <div class="hiw__step-icon icon-box icon-box-lg">⚡</div>
+          <h3 class="heading-md">Instant Matching</h3>
+          <p class="body-md">Our hyperlocal engine matches you with the nearest verified worker in seconds. Real-time GPS tracking from the moment they accept.</p>
+        </div>
+
+        <div class="hiw__connector reveal delay-3">
+          <div class="hiw__connector-line"></div>
+          <div class="hiw__connector-arrow">→</div>
+        </div>
+
+        <div class="hiw__step reveal delay-4">
+          <div class="hiw__step-num">03</div>
+          <div class="hiw__step-icon icon-box icon-box-lg">✅</div>
+          <h3 class="heading-md">Done & Verified</h3>
+          <p class="body-md">Worker uploads before/after proof photos. You rate the service and pay only when satisfied. Full job timeline in your history.</p>
+        </div>
+      </div>
+
+      <!-- Live tracking preview -->
+      <div class="hiw__tracking reveal">
+        <div class="tracking-card">
+          <div class="tracking-card__header">
+            <div class="tracking-card__status">
+              <span class="tracking-card__dot"></span>
+              Live Tracking
+            </div>
+            <span class="body-sm">Job #EC2891</span>
+          </div>
+          <div class="tracking-card__timeline">
+            <div class="tracking-event tracking-event--done">
+              <div class="tracking-event__dot tracking-event__dot--done"></div>
+              <div class="tracking-event__content">
+                <span class="tracking-event__label">Booking Confirmed</span>
+                <span class="tracking-event__time">2:14 PM</span>
+              </div>
+            </div>
+            <div class="tracking-event tracking-event--done">
+              <div class="tracking-event__dot tracking-event__dot--done"></div>
+              <div class="tracking-event__content">
+                <span class="tracking-event__label">Worker Assigned — Rajan Kumar</span>
+                <span class="tracking-event__time">2:15 PM</span>
+              </div>
+            </div>
+            <div class="tracking-event tracking-event--active">
+              <div class="tracking-event__dot tracking-event__dot--active"></div>
+              <div class="tracking-event__content">
+                <span class="tracking-event__label">On the way · 2 min away</span>
+                <span class="tracking-event__time">Now</span>
+              </div>
+            </div>
+            <div class="tracking-event">
+              <div class="tracking-event__dot"></div>
+              <div class="tracking-event__content">
+                <span class="tracking-event__label">Service in Progress</span>
+                <span class="tracking-event__time">—</span>
+              </div>
+            </div>
+            <div class="tracking-event">
+              <div class="tracking-event__dot"></div>
+              <div class="tracking-event__content">
+                <span class="tracking-event__label">Completed & Verified</span>
+                <span class="tracking-event__time">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       IMPACT / STATS
+  ═══════════════════════════════════ -->
+  <section class="impact section" id="impact">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="pill-tag">Real Impact</div>
+        <h2 class="heading-xl">Not Just a Service.<br/><span class="text-gradient">A Movement.</span></h2>
+      </div>
+
+      <div class="impact__grid grid-4">
+        <div class="impact__stat reveal card delay-1">
+          <div class="stat-number" data-target="12000" id="stat-jobs">0</div>
+          <div class="impact__stat-label">Jobs Completed</div>
+          <div class="impact__stat-sub">Across Bengaluru pilot zone</div>
+        </div>
+        <div class="impact__stat reveal card delay-2">
+          <div class="stat-number" data-target="500" id="stat-workers">0</div>
+          <div class="impact__stat-label">Workers Empowered</div>
+          <div class="impact__stat-sub">Avg income ₹22,000/mo</div>
+        </div>
+        <div class="impact__stat reveal card delay-3">
+          <div class="stat-number" data-target="48" id="stat-tons">0</div>
+          <div class="impact__stat-label">Tons Recycled</div>
+          <div class="impact__stat-sub">Kept out of landfills</div>
+        </div>
+        <div class="impact__stat reveal card delay-4">
+          <div class="stat-number" data-target="98" id="stat-rating">0</div>
+          <div class="impact__stat-label">% Satisfaction</div>
+          <div class="impact__stat-sub">Avg rating 4.8 ⭐</div>
+        </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="compare reveal">
+        <h3 class="heading-lg" style="text-align:center;margin-bottom:var(--space-6)">Why <span class="text-gradient">Ozomins</span>?</h3>
+        <div class="compare__table-wrap">
+          <table class="compare__table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="compare__th-eco">Ozomins</th>
+                <th>Urban Company</th>
+                <th>Swiggy/Zomato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Instant booking (&lt;60s)</td>
+                <td class="compare__eco"><span class="compare__check">✅</span></td>
+                <td><span class="compare__cross">❌</span></td>
+                <td><span class="compare__cross">❌</span></td>
+              </tr>
+              <tr>
+                <td>Real-time tracking</td>
+                <td class="compare__eco"><span class="compare__check">✅</span></td>
+                <td><span class="compare__cross">❌</span></td>
+                <td><span class="compare__check">✅</span></td>
+              </tr>
+              <tr>
+                <td>Sanitation & waste focus</td>
+                <td class="compare__eco"><span class="compare__check">✅</span></td>
+                <td>Partial</td>
+                <td><span class="compare__cross">❌</span></td>
+              </tr>
+              <tr>
+                <td>Waste monetization</td>
+                <td class="compare__eco"><span class="compare__check">✅</span></td>
+                <td><span class="compare__cross">❌</span></td>
+                <td><span class="compare__cross">❌</span></td>
+              </tr>
+              <tr>
+                <td>Hyperlocal (&lt;2km)</td>
+                <td class="compare__eco"><span class="compare__check">✅</span></td>
+                <td><span class="compare__cross">❌</span></td>
+                <td>Partial</td>
+              </tr>
+              <tr>
+                <td>Worker income ecosystem</td>
+                <td class="compare__eco"><span class="compare__check">✅</span></td>
+                <td>Partial</td>
+                <td><span class="compare__cross">❌</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       FOR WORKERS
+  ═══════════════════════════════════ -->
+  <section class="worker-section section" id="worker">
+    <div class="container">
+      <div class="worker-section__inner">
+        <div class="worker-section__left reveal">
+          <div class="pill-tag">For Workers</div>
+          <h2 class="heading-xl">Earn More.<br/><span class="text-gradient">Work Smarter.</span></h2>
+          <p class="body-lg">Join the Ozomins worker network and get a steady stream of jobs right on your phone. No middleman, no commission theft — you keep what you earn.</p>
+
+          <div class="worker-benefits">
+            <div class="worker-benefit">
+              <div class="icon-box">💰</div>
+              <div>
+                <h4 class="heading-md">₹18,000–₹35,000/mo</h4>
+                <p class="body-sm">Average worker earnings based on pilot data</p>
+              </div>
+            </div>
+            <div class="worker-benefit">
+              <div class="icon-box">📱</div>
+              <div>
+                <h4 class="heading-md">Simple Worker App</h4>
+                <p class="body-sm">Accept jobs, navigate, upload proof — all in one tap</p>
+              </div>
+            </div>
+            <div class="worker-benefit">
+              <div class="icon-box">🛡️</div>
+              <div>
+                <h4 class="heading-md">Insurance + Upskilling</h4>
+                <p class="body-sm">Free accident insurance and training programs provided</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="worker-join.html" class="btn btn-primary" id="worker-join-btn">Join as Worker →</a>
+        </div>
+
+        <div class="worker-section__right reveal delay-2">
+          <div class="worker-phone">
+            <div class="worker-phone__header">
+              <div style="font-weight:600;font-size:1rem;">4 new jobs nearby</div>
+              <span class="badge badge-green">● Online</span>
+            </div>
+            <div class="worker-job-card" id="worker-job-1">
+              <div class="worker-job__icon">🧹</div>
+              <div class="worker-job__info">
+                <div class="worker-job__title">Room Cleaning</div>
+                <div class="worker-job__meta">0.3 km · ₹180 · 45 min</div>
+              </div>
+              <div class="worker-job__actions">
+                <button class="btn btn-sm btn-outline" id="job-reject-1">✕</button>
+                <button class="btn btn-sm btn-primary" id="job-accept-1">Accept</button>
+              </div>
+            </div>
+            <div class="worker-job-card" id="worker-job-2">
+              <div class="worker-job__icon">♻️</div>
+              <div class="worker-job__info">
+                <div class="worker-job__title">Recycling Pickup</div>
+                <div class="worker-job__meta">0.6 km · ₹120 · 30 min</div>
+              </div>
+              <div class="worker-job__actions">
+                <button class="btn btn-sm btn-outline" id="job-reject-2">✕</button>
+                <button class="btn btn-sm btn-primary" id="job-accept-2">Accept</button>
+              </div>
+            </div>
+            <div class="worker-phone__earnings">
+              <span>Today's Earnings</span>
+              <span class="worker-phone__amount">₹ <span id="worker-earnings">1,420</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="pill-tag">Reviews</div>
+        <h2 class="heading-xl">What People Are <span class="text-gradient">Saying</span></h2>
+      </div>
+      <div class="testimonials__grid grid-3">
+        <div class="testimonial-card card reveal delay-1">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-card__text">"I booked a garbage pickup in literally 30 seconds. The worker arrived in 8 minutes. This is exactly what Bengaluru needed."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background:linear-gradient(135deg,#00C853,#00E676)">A</div>
+            <div>
+              <div class="testimonial-card__name">Anusha Reddy</div>
+              <div class="body-sm">Koramangala, Bengaluru</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card card reveal delay-2">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-card__text">"The recycling service actually paid me ₹230 for my old newspapers and bottles. Never expected to EARN from waste disposal!"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background:linear-gradient(135deg,#7C4DFF,#b388ff)">V</div>
+            <div>
+              <div class="testimonial-card__name">Vikram Nair</div>
+              <div class="body-sm">Indiranagar, Bengaluru</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card card reveal delay-3">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-card__text">"As a sanitation worker, I used to earn ₹8,000 a month. With Ozomins I'm now making ₹24,000. My kids are in better school now."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background:linear-gradient(135deg,#FF6D00,#ffab40)">R</div>
+            <div>
+              <div class="testimonial-card__name">Rajan Kumar</div>
+              <div class="body-sm">Worker · Ozomins Partner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       CTA SECTION
+  ═══════════════════════════════════ -->
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="orb orb-green" style="width:400px;height:400px;top:-100px;left:-100px;opacity:0.5;"></div>
+        <div class="orb orb-mint" style="width:300px;height:300px;bottom:-50px;right:-50px;opacity:0.3;animation-delay:2s;"></div>
+        <div class="cta-card__content">
+          <span class="pill-tag" style="margin-bottom:var(--space-4);">🚀 Join the Beta</span>
+          <h2 class="heading-xl">Ready to Make Your<br/><span class="text-gradient">City Cleaner?</span></h2>
+          <p class="body-lg" style="max-width:520px;margin:var(--space-4) auto;">Join thousands of residents and workers already using Ozomins. Be part of the urban cleanliness revolution.</p>
+          <div class="cta-card__btns">
+            <a href="contact.html" class="btn btn-primary btn-lg" id="cta-book-btn">
+              📩 Contact Sales
+            </a>
+            <a href="worker-join.html" class="btn btn-ghost btn-lg" id="cta-worker-btn">
+              👷 Become a Worker
+            </a>
+          </div>
+          <p class="body-sm" style="margin-top:var(--space-4);color:var(--text-muted)">Free for first 3 bookings · No credit card required · Cancel anytime</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="nav__brand">
+            <div class="nav__logo"><span class="nav__logo-icon">🌿</span></div>
+            <span class="nav__name">Ozomins</span>
+          </div>
+          <p class="body-sm" style="max-width:260px;margin-top:var(--space-3);">"Eco services delivered in minutes." India's on-demand sanitation & waste logistics platform.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" id="footer-twitter" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social-link" id="footer-instagram" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social-link" id="footer-linkedin" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div class="footer__links-group">
+          <h4 class="footer__group-title">Services</h4>
+          <a href="cleaning.html" class="footer__link">Cleaning</a>
+          <a href="garbage.html" class="footer__link">Garbage Pickup</a>
+          <a href="recycling.html" class="footer__link">Recycling</a>
+          <a href="transport.html" class="footer__link">Transport</a>
+          <a href="emergency.html" class="footer__link">Emergency</a>
+        </div>
+
+        <div class="footer__links-group">
+          <h4 class="footer__group-title">Company</h4>
+          <a href="about.html" class="footer__link">About Us</a>
+          <a href="careers.html" class="footer__link">Careers</a>
+          <a href="press.html" class="footer__link">Press</a>
+          <a href="blog.html" class="footer__link">Blog</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
+
+        <div class="footer__links-group">
+          <h4 class="footer__group-title">For Workers</h4>
+          <a href="worker-join.html" class="footer__link">Join Network</a>
+          <a href="worker-training.html" class="footer__link">Training</a>
+          <a href="worker-insurance.html" class="footer__link">Insurance</a>
+          <a href="worker-support.html" class="footer__link">Support</a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="footer__bottom">
+        <p class="body-sm">© 2025 Ozomins Technologies Pvt. Ltd. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="privacy.html" class="footer__link">Privacy Policy</a>
+          <a href="terms.html" class="footer__link">Terms of Service</a>
+          <a href="cookies.html" class="footer__link">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/config.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "ozomins-backend",
+  "version": "1.0.0",
+  "description": "Serverless backend for Ozomins app",
+  "main": "api/bookings.js",
+  "scripts": {
+    "start": "node local_server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.1.0"
+  }
+}

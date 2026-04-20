@@ -1,0 +1,32 @@
+name = "ozomin-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ozomin-db"
+database_id = "1be8c7bc-1284-4709-8fbe-0675946fd028"
+
+[[kv_namespaces]]
+binding = "STORE_KV"
+id = "70def8a6dd38446cb604722047b93007"
+
+[vars]
+ENVIRONMENT = "production"
+POINTS_PER_RUPEE = "0.1"
+MAX_POINTS_DISCOUNT_PCT = "20"
+
+# Secrets (set via: wrangler secret put SECRET_NAME)
+# RESEND_API_KEY
+# RAZORPAY_KEY_ID
+# RAZORPAY_KEY_SECRET
+# ANTHROPIC_API_KEY
+# ADMIN_EMAIL
+# ADMIN_API_KEY
+# ADMIN_OTP_SECRET
+# WEBHOOK_SECRET
+
+[dev]
+port = 8787
+local_protocol = "http"

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "155916865684",
+    "project_id": "ozomin-dee0c",
+    "storage_bucket": "ozomin-dee0c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155916865684:android:dbe9e64bb1da60dc1d2481",
+        "android_client_info": {
+          "package_name": "com.ozomins.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxRK1Ju2_B31HaCUfdbGQ27pGB127DToQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

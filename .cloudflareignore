@@ -1,0 +1,10 @@
+ozomin_worker/
+ozomins_backend/
+ozomins_flutter/
+node_modules/
+.vercel/
+.vscode/
+package-lock.json
+package.json
+vercel.json
+test-api.js
