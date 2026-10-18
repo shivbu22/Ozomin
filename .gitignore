@@ -45,3 +45,5 @@ dist/
 # User Specific Removes
 README.md
 firebase_options.dart
+
+.venv/
